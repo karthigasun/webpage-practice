@@ -378,29 +378,31 @@
 /* TRAINING-CONTAINER */
 
 .training-container{
-    outline: solid 2px black;
+    /* outline: solid 2px black; */
     margin: auto;
     width: 1200px;
-    height: 650px;
+    height: 550px;
     display: flex;
     flex-direction: column;
 }
 .training-head  ul {
-    margin-top: 50px;
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin: 70px 60px 0px 60px;
+
 }
 .training-head ul li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 30px;
     color: black;
 }
 .training-container a:hover{
     color: #feb900;
+    transition: 0.3s;
 }
 .training-foot{
-    outline: solid 2px black;
+    /* outline: solid 2px black; */
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -410,30 +412,165 @@
 }
 
 .training-left h2{
-    padding: 40px 0px 20px 110px;
+    padding: 80px 0px 20px 50px;
     font-size: 25px
 }
 .training-left p{
     font-size: 20px;
-    padding:  0px 0px 20px 110px;
-    max-width: 50%;
+    padding:  20px 0px 20px 50px;
+    max-width: 80%;
 }.training-left ul li{
     font-size: 20px;
-    padding:  10px 0px 20px 160px;
-    width: 90%;
+    padding:  10px 0px 20px 70px;
+    max-width: 80%;
     list-style: none;
 }
 .training-left i{
     position: absolute;
-    left: 140px;
+    left: 50px;
     color: #feb900;
     padding-top: 15px;
 }.training-right{
-    outline: solid 2px black;
-    height: 520px;
-    width: 600px;
+    /* outline: solid 2px black; */
+    height: 420px;
+    width: 80%;
     margin-top: 20px;
     background-image: url(images/fat.jpg);
     background-position: center;
     background-size: cover;
+}
+.training-color{
+    background-color: #f5f6f7;
+    height: 650px;
+}
+
+/* PROJECT-CONTAINER */
+
+.project-container{ 
+    /* outline: solid 2px black; */
+    margin: auto;
+    width: 1200px;
+    height: 1500px;
+    display: flex;
+    flex-direction: column;
+}
+.project-header h2{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+}
+.project-header p{
+    text-align: center;
+    font-size: 18px;
+    margin: 10px 0px 0px 150px;
+    max-width: 70%;
+}
+.project-work ul{
+    margin-top: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+.project-work ul li a{
+    margin-left: 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.project-work ul li a:hover{
+    color: #feb900;
+    transition: 0.3s;
+}
+.project-images{
+    /* outline: solid 2px black; */
+    margin-top: 15px 0px 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-image{
+    /* outline: solid 2px black; */
+    width: 33.333333%;
+    padding: 15px;
+}
+
+.project-card{
+    position: relative;
+    overflow: hidden;
+}
+.project-card img{
+    max-width: 100%;
+    transition: 0.3s;
+}
+.project-card:hover img{
+    transform: scale(1.1);
+
+}
+.project-info{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+}
+.project-card:hover .project-info{
+    opacity: 1;
+    transition: all 0.3s;
+}
+.project-info h4{
+    padding: 5px;
+    position: absolute;
+    font-size: 20px;
+    background-color: #feb900;
+    color: #fff;
+    top: 10px;
+    left: 10px;
+}
+
+.project-link a i{
+    position: relative;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
+    top: 120px;
+    left: 110px;
+}
+    
+.project-info p{
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    left: 50px;
+    top: 230px;
+}
+
+/* TESTIMONIALS-CONTAINER */
+
+.testimonials{
+    outline: solid 2px black;
+    margin: auto;
+    width: 1200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.testi-head{
+    text-align: center;
+    margin-top: 40px;
+
+}
+.testi-head h3{
+    font-size: 25px;
+    padding: 10px;
+}
+.testi-head p{
+    font-size: 15px;
+    margin: 10px 0px 10px 300px;
+    width: 50%;
+}
+.testi-foot{
+    display: flex;
+    /* justify-content: space-between; */
+    outline:  solid 2px black;
 }
