@@ -15,7 +15,7 @@
 .container{
     width: 100%;
     /* outline: 2px solid black; */
-    font-weight: 400;
+    font-family: sans-serif;
 }
 .header-container{
     margin: auto;
@@ -25,9 +25,12 @@
     align-items: center;
 
 }
+.navigation{
+    margin-top: 30px;
+}
 .logo h1{
     font-size: 30px;
-    margin-top: 10px;
+    margin-top: 30px;
     text-decoration: none;
     display: inline-block;
     color: white;
@@ -42,12 +45,39 @@
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
-    padding: 15px;
+    margin: 20px;
     color:rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+.navigation ul li a.active{
+    color: #fff;
 }
 .navigation ul li a:hover{
     color: #fff;
     transition: 0.3s;
+}
+.active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: -4px;
+    height: 2px;
+    background-color: #feb900;
+    width: 100%;
+}
+.uline::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    bottom: -4px;
+    height: 2px;
+    background-color: #feb900;
+    transition: 0.2s width ease-in-out;
+}
+.uline:hover::after{
+    width: 100%;
 }
 .welcome h1{
     margin: auto;
@@ -55,6 +85,16 @@
     width: 30%;
     font-size: 45px;
     margin-top: 30px;
+    position: relative;
+}
+.welcome h1::after{
+    content: "";
+    position: absolute;
+    background-color: #feb900;
+    width: 30%;
+    height: 4px;
+    left: 140px;
+    bottom: -15px;
 }
 .welcome p{
     margin: auto;
@@ -65,20 +105,18 @@
     
 
 }
-.welcome h2 {
+.welcome button {
     text-align: center;
     font-size: 30px;
-    margin: 50px 0px 0px 0px;
-    padding-bottom: 50px;
-}
-.welcome h2 a{
+    margin: 50px 0px 0px 600px;
+    background-color: transparent;
     border: solid 2px #feb900;
     border-radius: 50px; 
     padding: 10px;
     text-decoration: none;
     color: white;
 }
-.welcome h2 a:hover{
+.welcome button:hover{
     background-color: #feb900;
     transition: 0.3s;
 }
@@ -110,16 +148,27 @@
 }
 
 .page-left h2{
-     margin: 150px 100px 50px 0px;
-     width: 70%;
-     font-size: 30px;
-
+    margin: 150px 100px 50px 0px;
+    width: 70%;
+    position: relative;
+    font-size: 30px;
+}
+.page-left h2::after{
+    content: "";
+    position: absolute;
+    background-color: #feb900;
+    width: 20%;
+    height: 4px;
+    left: 0px;
+    bottom: -15px;
 }
 .page-left p{
     width: 95%;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 30px;
 }
+
 .page-right{
     flex-basis: 40%;
     height: 520px;
@@ -133,7 +182,8 @@
 .page-right p{
     margin:20px 0px 20px 25px;
     width: 90%;
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 20px;
 }
 .email{ 
     margin: 0px 0px 30px 30px;
@@ -196,6 +246,7 @@ textarea:focus{
     width: 40%;
     margin-left: 350px;
     padding-bottom: 70px;
+    line-height: 20px;
 }
 .works{
     margin: auto;
@@ -225,8 +276,9 @@ textarea:focus{
 .image-text p{
     width: 100%;
     padding: 20px;
-    font-size: 17px;
+    font-size: 14px;
     padding-left: 45px;
+    line-height: 20px;
 }
 
 /* SERVICE-CONTAINER */
@@ -291,18 +343,30 @@ textarea:focus{
 
 } 
 .service h2{
+    width: 70%;
     font-size: 22px;
     margin: 0 0 10px 60px;
     padding-bottom: 8px;
-
-    
+    position: relative;
+}
+.service h2::after{
+    content: "";
+    position: absolute;
+    background-color: #f5f6f7;
+    width: 70%;
+    height: 4px;
+    left: 0px;
+    bottom: -15px
+}
+.service:hover  h2::after{
+    background-color: #feb900;
 }
 .service p{
     padding: 20px 0px 20px 0px;
     font-size: 15px;
     width: 80%;
-    line-height: 1.5;
     margin-left: 50px;
+    line-height: 1.5;
 }
 .arrow a {
     display: inline-block;
@@ -352,6 +416,16 @@ textarea:focus{
 .heading h2{
     font-size: 30px;
     padding-bottom: 20px;
+    position: relative;
+}
+.heading h2::after{
+    content: "";
+    position: absolute;
+    background-color: #feb900;
+    width: 20%;
+    height: 4px;
+    left: 0px;
+    bottom: 0px
 }
 .heading p{
     font-size: 18px;
@@ -378,7 +452,7 @@ textarea:focus{
 
 .sub p{
     font-size: 15px;
-    padding: 10px 0px 10px 48px;
+    padding: 0px 0px 10px 48px;
     max-width: 70%;
     
 }
@@ -422,17 +496,39 @@ textarea:focus{
     display: flex;
     justify-content: space-between;
     margin: 70px 60px 0px 60px;
-
+}
+.training-head ul .aline a{
+    width: 25%;
+    text-align: center;
+    margin: 20px;
+    color: #feb900;
+    margin: 25px;
+}
+.training-head ul .aline{
+    width: 25%;
+    text-align: center;
+    border-bottom: 4px solid #feb900;
+    margin: 10px;
+}
+.training-head ul .bline{
+    width: 25%;
+    text-align: center;
+    border-bottom: 4px solid #e2e4e6;
+    margin: 10px;
+}
+.training-head ul .bline:hover a{
+    color: #feb900;
+    transition: 0.2s;
+}
+.training-head ul .bline:active{
+    border-color: #feb900;
 }
 .training-head ul li a{
     text-decoration: none;
     font-size: 30px;
     color: black;
 }
-.training-container a:hover{
-    color: #feb900;
-    transition: 0.3s;
-}
+
 .training-foot{
     /* outline: solid 2px black; */
     display: flex;
@@ -445,13 +541,24 @@ textarea:focus{
 
 .training-left h2{
     padding: 80px 0px 20px 50px;
-    font-size: 25px
+    font-size: 25px;
+    position: relative;
+}
+.training-left h2::after{
+    content: "";
+    position: absolute;
+    background-color: #feb900;
+    width: 10%;
+    bottom: 0;
+    left: 50px;
+    height: 4px;
 }
 .training-left p{
     font-size: 20px;
     padding:  20px 0px 20px 50px;
     max-width: 80%;
-}.training-left ul li{
+}
+.training-left ul li{
     font-size: 20px;
     padding:  10px 0px 20px 70px;
     max-width: 80%;
@@ -503,13 +610,20 @@ textarea:focus{
     display: flex;
     justify-content: center;
 }
-.project-work ul li a{
+.project-work ul li .dline{
+    margin-left: 40px;
+    text-decoration: none;
+    color: #feb900;
+    font-size: 20px;
+}
+
+.project-work ul li .cline{
     margin-left: 40px;
     text-decoration: none;
     color: black;
     font-size: 20px;
 }
-.project-work ul li a:hover{
+.project-work ul li .cline:hover{
     color: #feb900;
     transition: 0.3s;
 }
@@ -518,6 +632,7 @@ textarea:focus{
     margin-top: 15px 0px 50px 0px;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 .project-image{
     /* outline: solid 2px black; */
@@ -600,6 +715,7 @@ textarea:focus{
     font-size: 18px;
     margin: 10px 0px 10px 300px;
     width: 50%;
+    line-height: 27px;
 }
 .testi-foot{
     display: flex;
@@ -611,15 +727,11 @@ textarea:focus{
     /* outline: solid 2px black; */
     display: flex;
     flex-direction: row;
-    box-shadow: #fff 0 0 10px;
     position: relative;
-
-
 }
 .testi-photo{
     margin-left: -20px;
     /* background-color: #fff; */
-    
 } 
 .testi-photo img{
     max-width: 80px;
